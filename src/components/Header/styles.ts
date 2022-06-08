@@ -1,7 +1,6 @@
 import {
   convertPixelToRem,
   flex,
-  getBoxWidthAndHeight,
   getPadding,
 } from 'css-blocks-styled-components';
 import styled from 'styled-components';

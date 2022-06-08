@@ -2,6 +2,8 @@ import PageWrapper from "../../components/PageWrapper";
 import { RegistersList, Title } from "./styles";
 import { REGISTERS } from "../../utils/fakeRegisters";
 import SingleRegister from "./SingleRegister";
+import Paginator from "../../components/Paginator";
+import { useState } from "react";
 
 export interface Register {
   id: number;
@@ -9,16 +11,30 @@ export interface Register {
   date: string;
 }
 
-const Home: React.FC = () => (
+const Home: React.FC = () => {
+  const [page, setPage] = useState(1);
+
+  return (
   <PageWrapper>
     <Title>Registers List</Title>
 
-    <RegistersList>
-      {REGISTERS.map((register) => (
-        <SingleRegister key={register.id} register={register} />
-      ))}
-    </RegistersList>
+    <Paginator
+      totalCountOfRegisters={REGISTERS.length}
+      registersPerPage={5}
+      currentPage={page}
+      onPageChange={setPage}
+      items={REGISTERS}
+    >
+        {(displayRegisters) => (
+            <RegistersList>
+              {displayRegisters.map((register) => (
+                <SingleRegister key={register.id} register={register} />
+              ))}
+            </RegistersList>   
+        )}
+    </Paginator>
   </PageWrapper>
-);
+  );
+};
 
 export default Home;
