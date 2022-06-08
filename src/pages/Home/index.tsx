@@ -1,5 +1,5 @@
 import PageWrapper from "../../components/PageWrapper";
-import { RegistersList, Title } from "./styles";
+import { HeadTable, RegistersList, SubTitle, Title } from "./styles";
 import { REGISTERS } from "../../utils/fakeRegisters";
 import SingleRegister from "./SingleRegister";
 import Paginator from "../../components/Paginator";
@@ -16,7 +16,12 @@ const Home: React.FC = () => {
 
   return (
   <PageWrapper>
-    <Title>Registers List</Title>
+    <Title>Time List</Title>
+
+    <HeadTable>
+      <SubTitle>Bus:</SubTitle>
+      <SubTitle>Time:</SubTitle>
+    </HeadTable>
 
     <Paginator
       totalCountOfRegisters={REGISTERS.length}
