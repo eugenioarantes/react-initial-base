@@ -7,6 +7,11 @@ export const Title = styled.h1`
   color: white;
   font-size: ${convertPixelToRem(35)};
   ${flex.justifyCenter};
+  transition: color 0.5s ease;
+
+  :hover {
+    color: #c1c1c1;
+  }
 `;
 
 export const HeadTable = styled.div`
@@ -19,6 +24,11 @@ export const SubTitle = styled.div`
   font-size: ${convertPixelToRem(35)};
   color: white;
   font-weight: bold;
+  transition: color 0.5s ease;
+
+  :hover {
+    color: #c1c1c1;
+  }
 `;
 
 export const RegistersList = styled.div`

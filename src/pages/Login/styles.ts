@@ -17,6 +17,9 @@ export const PageWrapper = styled.div`
   ${flex.alignCenterColumn}
   margin: 0 auto;
   min-width: 25%;
+  background: #1b1b1b;
+  padding: ${convertPixelToRem(115)} ${convertPixelToRem(50)};
+  border-radius: ${convertPixelToRem(20)};
 
   h1 {
     color: white;
@@ -32,6 +35,11 @@ export const TitleSignIn = styled.h2`
   text-transform: uppercase;
 
   color: #d1d1d1;
+  transition: color 0.5s ease;
+
+  :hover {
+    color: #fff;
+  }
 `;
 
 export const StyledForm = styled(Form)`
@@ -44,6 +52,11 @@ export const InputLabel = styled.label`
   font-size: ${convertPixelToRem(19)};
   color: #c1c1c1;
   display: block;
+  transition: color 0.5s ease;
+
+  :hover {
+    color: #fff;
+  }
 `;
 
 export const StyledActionButton = styled(ActionButton)`

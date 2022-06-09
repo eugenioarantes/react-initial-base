@@ -12,17 +12,27 @@ export const Container = styled.header`
 `;
 
 export const Logo = styled.span`
-  color: #fff;
+  color: #c1c1c1;
   font-size: ${convertPixelToRem(40)};
   font-weight: bold;
+  transition: color 0.5s ease;
+
+  :hover {
+    color: #fff;
+  }
 `;
 
 export const SignOutButton = styled(TransparentButton)`
   a {
-    color: white;
+    color: #c1c1c1;
     margin-right: ${convertPixelToRem(8)};
     /* optical alignment */
     margin-top: ${convertPixelToRem(3)};
-    font-size: ${convertPixelToRem(18)};
+    font-size: ${convertPixelToRem(20)};
+    transition: color 0.5s ease;
+
+    :hover {
+      color: #fff;
+    }
   }
 `;
