@@ -11,5 +11,4 @@ export const Container = styled.div`
 export const MaxWidthWrapper = styled.div`
   margin: 0 auto;
   max-width: 90%;
-
 `;

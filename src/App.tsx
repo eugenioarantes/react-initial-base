@@ -1,15 +1,11 @@
-import { BrowserRouter } from 'react-router-dom';
-
+import AppProvider from './providers';
 import AppRoutes from './routes';
-
-import { GlobalStyle } from './styles/global';
 
 function App(): JSX.Element {
   return (
-    <BrowserRouter>
-     <GlobalStyle/>
+    <AppProvider>
       <AppRoutes />
-    </BrowserRouter>
+    </AppProvider>
   );
 }
 

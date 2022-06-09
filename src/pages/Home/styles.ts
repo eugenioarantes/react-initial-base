@@ -27,7 +27,7 @@ export const RegistersList = styled.div`
 
 export const RegisterContainer = styled.div`
   background: #393939;
-  box-shadow:'7px 7px 12px 3px rgba(102,102,102,0.04)';
+  box-shadow: '7px 7px 12px 3px rgba(102,102,102,0.04)';
   border-radius: 5px;
   height: ${convertPixelToRem(65)};
 
@@ -46,6 +46,6 @@ export const RegistersCard = styled.div`
 
   h1 {
     font-size: ${convertPixelToRem(28)};
-    color: #D9D9D9;
+    color: #d9d9d9;
   }
 `;

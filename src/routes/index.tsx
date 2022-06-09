@@ -1,15 +1,31 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+
+import { Routes, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
+import Login from '../pages/Login';
+import ProtectedRoute from './ProtectedRoute';
 
+const Router: React.FC = () => (
+  <Routes>
+    <Route
+      path="/"
+      element={
+        <ProtectedRoute isPrivate>
+          <Home />
+        </ProtectedRoute>
+      }
+    />
 
-const AppRoutes: React.FC = () => {
-  return (
-    <Switch>
-      <Route path="/" component={Home} />
-    </Switch>
-  );
-};
+    <Route
+      path="/login"
+      element={
+        <ProtectedRoute>
+          <Login />
+        </ProtectedRoute>
+      }
+    />
+  </Routes>
+);
 
-export default AppRoutes;
+export default Router;

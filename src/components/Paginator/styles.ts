@@ -1,5 +1,5 @@
-import { convertPixelToRem, flex } from "css-blocks-styled-components";
-import styled from "styled-components";
+import { convertPixelToRem } from 'css-blocks-styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   float: right;

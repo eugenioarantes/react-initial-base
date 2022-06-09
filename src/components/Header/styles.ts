@@ -1,8 +1,4 @@
-import {
-  convertPixelToRem,
-  flex,
-  getPadding,
-} from 'css-blocks-styled-components';
+import { convertPixelToRem, flex, getPadding } from 'css-blocks-styled-components';
 import styled from 'styled-components';
 
 import { TransparentButton } from '../misc/Buttons';
@@ -12,7 +8,7 @@ export const Container = styled.header`
   ${flex.between}
   background: #111111;
 
-  height: ${convertPixelToRem(96)};;
+  height: ${convertPixelToRem(96)};
 `;
 
 export const Logo = styled.span`
@@ -22,7 +18,7 @@ export const Logo = styled.span`
 `;
 
 export const SignOutButton = styled(TransparentButton)`
-  span {
+  a {
     color: white;
     margin-right: ${convertPixelToRem(8)};
     /* optical alignment */
