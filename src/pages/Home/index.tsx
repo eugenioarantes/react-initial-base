@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PageWrapper from '../../components/PageWrapper';
-import { HeadTable, RegistersList, SubTitle, Title } from './styles';
+import { ButtonContainer, HeaderTitle, HeadTable, RegistersList, SubTitle, Title } from './styles';
 import { REGISTERS } from '../../utils/fakeRegisters';
 import SingleRegister from './SingleRegister';
 import Paginator from '../../components/Paginator';
+import ActionButton from '../../components/ActionButton';
 
 export interface Register {
   id: number;
@@ -16,7 +18,15 @@ const Home: React.FC = () => {
 
   return (
     <PageWrapper>
-      <Title>Time List</Title>
+      <HeaderTitle>
+        <Title>Time List</Title>
+
+        <ButtonContainer>
+          <Link to="/create-register">
+            <ActionButton>Create new</ActionButton>
+          </Link>
+        </ButtonContainer>
+      </HeaderTitle>
 
       <HeadTable>
         <SubTitle>Bus:</SubTitle>

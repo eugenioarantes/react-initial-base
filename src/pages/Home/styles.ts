@@ -1,9 +1,16 @@
-import { convertPixelToRem, flex } from 'css-blocks-styled-components';
+import { convertPixelToRem, flex, getMargin, getPadding } from 'css-blocks-styled-components';
 import styled from 'styled-components';
 
+export const HeaderTitle = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin: ${convertPixelToRem(30)} 0;
+`;
+
 export const Title = styled.h1`
+  margin-left: ${convertPixelToRem(120)};
   margin-top: ${convertPixelToRem(40)};
-  margin-bottom: ${convertPixelToRem(60)};
+  margin-bottom: ${convertPixelToRem(15)};
   color: white;
   font-size: ${convertPixelToRem(35)};
   ${flex.justifyCenter};
@@ -12,6 +19,12 @@ export const Title = styled.h1`
   :hover {
     color: #c1c1c1;
   }
+`;
+
+export const ButtonContainer = styled.div`
+  ${getMargin(25)};
+  margin-left: auto;
+  width: max-content;
 `;
 
 export const HeadTable = styled.div`
